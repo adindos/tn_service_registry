@@ -5,9 +5,19 @@ pipeline {
         timeout(time: 1, unit: 'SECONDS')
     }
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Build tn_service_registry'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test tn_service_registry'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy tn_service_registry'
             }
         }
     }
