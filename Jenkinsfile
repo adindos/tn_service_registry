@@ -7,7 +7,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build tn_service_registry - pulling automatically'
+                script {
+                // Build your Spring Boot application
+                sh 'mvn clean package'
+                }
             }
         }
         stage('Test') {
