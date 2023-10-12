@@ -7,17 +7,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build tn_service_registry'
+                echo 'Build tn_service_registry - pulling automatically'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test tn_service_registry'
+                echo 'Test tn_service_registry - pulling automatically'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy tn_service_registry'
+                echo 'Deploy tn_service_registry - pulling automatically'
             }
         }
     }
