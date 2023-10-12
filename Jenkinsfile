@@ -1,6 +1,5 @@
 
 pipeline {
-    agent any
     agent { docker {image 'maven : 3.9.2' } }
     options {
         // Timeout counter starts AFTER agent is allocated
