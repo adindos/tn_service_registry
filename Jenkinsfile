@@ -1,32 +1,9 @@
-
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.4-eclipse-temurin-17-alpine' 
-            args '-v /root/.m2:/root/.m2' 
-        }
-    }
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 1, unit: 'SECONDS')
-    }
+    agent { docker { image 'maven:3.9.4-eclipse-temurin-17-alpine' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                script {
-                // Build your Spring Boot application
-                sh 'mvn clean package'
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Test tn_service_registry - pulling automatically'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy tn_service_registry - pulling automatically'
+                sh 'mvn --version'
             }
         }
     }
