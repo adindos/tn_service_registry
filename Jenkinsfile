@@ -1,6 +1,11 @@
 
 pipeline {
-    agent { docker {image 'maven : 3.9.2' } }
+    agent {
+        docker {
+            image 'maven:3.9.4-eclipse-temurin-17-alpine' 
+            args '-v /root/.m2:/root/.m2' 
+        }
+    }
     options {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 1, unit: 'SECONDS')
