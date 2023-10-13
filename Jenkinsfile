@@ -17,6 +17,10 @@ pipeline {
             steps {
                 echo 'Deploy tn_service_registry build automatically #22'
                 sh 'mvn --version'
+
+                dir('/var/lib/jenkins/workspace/tnet_service_registry_main') {
+                     sh 'mvn clean package -DskipTests'
+                }
             }
         }
     }
