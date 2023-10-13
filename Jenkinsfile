@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.9.4-eclipse-temurin-17-alpine' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                echo 'Deploy tn_service_registry build automatically #20'
+                echo 'Deploy tn_service_registry build automatically #21'
                 sh 'mvn --version'
             }
         }
