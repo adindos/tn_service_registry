@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Deploy tn_service_registry build automatically #18'
+                echo 'Deploy tn_service_registry build automatically #20'
                 sh 'mvn --version'
             }
         }
